@@ -1,0 +1,8 @@
+name = "deulern"
+compatibility_date = "2026-08-15"
+
+# Assets-only Worker: no `main` script, so every request is served straight from public/.
+# _headers there still applies. html_handling defaults to auto-trailing-slash, which is what
+# makes /de/ resolve to /de/index.html.
+[assets]
+directory = "./public"

@@ -10,9 +10,10 @@ public/            everything that gets deployed
   de/index.html    German   → https://deulern.com/de/
   styles.css       all design.md tokens live in the :root block at the top
   fonts/           self-hosted Manrope (variable, latin subset)
-  _headers         Cloudflare Pages cache + security headers
+  _headers         cache + security headers (Workers Assets honours this file)
 design.md          the design system this is built to
 check.mjs          SEO / link self-check
+wrangler.toml      assets-only Worker — no script, public/ is served directly
 ```
 
 ## Edit
@@ -28,7 +29,7 @@ German one. That class decides which side is highlighted and which flag shows. N
 
 ```sh
 node check.mjs                  # canonical, hreflang, JSON-LD, anchors, sitemap, assets
-npx wrangler pages dev public   # local preview at http://localhost:8788
+npx wrangler dev                # local preview at http://localhost:8787
 ```
 
 Run `check.mjs` after any content edit — it catches the SEO breakage that is otherwise invisible.
@@ -36,10 +37,11 @@ Run `check.mjs` after any content edit — it catches the SEO breakage that is o
 ## Deploy
 
 ```sh
-npx wrangler pages deploy public
+npx wrangler deploy
 ```
 
-Custom domain `deulern.com` is set on the Pages project in the Cloudflare dashboard.
+Custom domain `deulern.com` is set on the Worker in the Cloudflare dashboard. In Workers Builds
+the build command stays empty, deploy command is `npx wrangler deploy` — there is nothing to build.
 
 ## TODO
 
