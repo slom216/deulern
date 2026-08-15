@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>DeuLern: Free Apps for German Grammar, Vocabulary and Verbs</title>
+<meta name="description" content="Three free apps for learning German — grammar, vocabulary and verbs. No account, no cost, nothing to install. Open one in your browser and start practising.">
+
+<link rel="canonical" href="https://deulern.com/">
+<link rel="alternate" hreflang="en" href="https://deulern.com/">
+<link rel="alternate" hreflang="de" href="https://deulern.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://deulern.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DeuLern">
+<meta property="og:title" content="DeuLern — Free Apps for Learning German">
+<meta property="og:description" content="Grammar, vocabulary and verbs — three free German learning apps you can open in your browser. No account, no cost.">
+<meta property="og:url" content="https://deulern.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<!-- TODO: add a 1200x630 share image, then uncomment:
+<meta property="og:image" content="https://deulern.com/og.png">
+<meta property="og:image:alt" content="DeuLern — free apps for learning German"> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DeuLern — Free Apps for Learning German">
+<meta name="twitter:description" content="Grammar, vocabulary and verbs — three free German learning apps. No account, no cost.">
+
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f2530" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/manrope-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+
+<script>
+  /* Theme: stored choice wins, otherwise the OS decides via color-scheme in the CSS.
+     Runs in <head> so a stored dark choice is applied before first paint. */
+  const root = document.documentElement;
+  if (localStorage.deulernTheme) root.dataset.theme = localStorage.deulernTheme;
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.theme-toggle')) return;
+    const dark = root.dataset.theme
+      ? root.dataset.theme === 'dark'
+      : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = localStorage.deulernTheme = dark ? 'light' : 'dark';
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DeuLern",
+  "url": "https://deulern.com/",
+  "inLanguage": ["en", "de"],
+  "description": "Free apps for learning German grammar, vocabulary and verbs."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Free German learning apps by DeuLern",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Grammatik mit System",
+        "url": "https://grammatik.deulern.com",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web browser",
+        "inLanguage": "de",
+        "description": "German grammar explained step by step — cases, tenses and word order, with exercises after every rule.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Deutsch Wortschatz",
+        "url": "https://wortschatz.deulern.com",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web browser",
+        "inLanguage": "de",
+        "description": "Build German vocabulary with themed word sets and repetition that brings back what you are about to forget.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Deutsch Verben Meistern",
+        "url": "https://verben.deulern.com",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web browser",
+        "inLanguage": "de",
+        "description": "Practise German verbs tense by tense — regular, irregular and separable, until the forms come automatically.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are the apps really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All three apps are free to use in full. There is no trial, no paid tier and nothing to unlock." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Open an app and start practising straight away — there is no sign-up form and no email required." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which level are the apps for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "They suit beginners through upper intermediate learners, roughly A1 to B1. Start with grammar if you are new, vocabulary if you already know the basics." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do they work on a phone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every app runs in the browser and adapts to phone, tablet and desktop. There is nothing to install." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="wordmark" href="/">Deu<b>Lern</b></a>
+
+    <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/>
+      </svg>
+    </button>
+
+    <a class="lang lang--en" href="/de/" hreflang="de" lang="de" aria-label="Diese Seite auf Deutsch ansehen">
+      <span class="lang__opt lang__opt--en">
+        <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+          <rect width="20" height="14" fill="#fff"/>
+          <g fill="#b22234">
+            <rect width="20" height="1.08" y="0"/><rect width="20" height="1.08" y="2.15"/>
+            <rect width="20" height="1.08" y="4.31"/><rect width="20" height="1.08" y="6.46"/>
+            <rect width="20" height="1.08" y="8.62"/><rect width="20" height="1.08" y="10.77"/>
+            <rect width="20" height="1.08" y="12.92"/>
+          </g>
+          <rect width="8" height="7.54" fill="#3c3b6e"/>
+        </svg>
+        EN
+      </span>
+      <span class="lang__opt lang__opt--de">
+        <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
+          <rect width="20" height="4.67" y="0" fill="#000"/>
+          <rect width="20" height="4.67" y="4.67" fill="#d00"/>
+          <rect width="20" height="4.66" y="9.34" fill="#ffce00"/>
+        </svg>
+        DE
+      </span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="t-eyebrow">Three apps · Free forever</p>
+        <h1 class="t-display">Learn German for free forever.</h1>
+        <p class="t-lead">Grammar, vocabulary and verbs — each one its own focused app, each one free. Open a link and start practising. No account, no download, no upsell. No data will be sent to our servers, all data stays on your PC or mobile device.</p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#apps">See the apps</a>
+          <a class="btn btn--secondary" href="#faq">How is it free?</a>
+        </div>
+
+        <ul class="hero__proof">
+          <li>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6"/></svg>
+            No sign-up
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6"/></svg>
+            Works on phone and desktop
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6"/></svg>
+            A1 to B1
+          </li>
+        </ul>
+      </div>
+
+      <div class="stack" aria-hidden="true">
+        <div class="stack__row">
+          <span class="stack__glyph">Gr</span>
+          <span><b>Grammatik mit System</b><span>Cases, tenses, word order</span></span>
+        </div>
+        <div class="stack__row">
+          <span class="stack__glyph">Wo</span>
+          <span><b>Deutsch Wortschatz</b><span>Words that actually stay</span></span>
+        </div>
+        <div class="stack__row">
+          <span class="stack__glyph">Ve</span>
+          <span><b>Deutsch Verben Meistern</b><span>Every tense, drilled</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="container">
+      <div class="section__head">
+        <p class="t-eyebrow">The apps</p>
+        <h2 class="t-h2">Three tools, one gap each.</h2>
+        <p class="t-lead">Most learners get stuck on one thing at a time. Rather than one app that does everything adequately, each of these does a single job properly.</p>
+      </div>
+
+      <ul class="cards">
+        <li class="card">
+          <p class="card__num">01 — Grammar</p>
+          <h3 class="t-h3">Grammatik mit System</h3>
+          <p>The rules in an order that builds: cases, tenses, word order, subordinate clauses. Every rule is followed by exercises, so you find out immediately whether it landed.</p>
+          <ul class="chips">
+            <li class="chip">Cases &amp; prepositions</li>
+            <li class="chip">Sentence structure</li>
+            <li class="chip">Exercises per rule</li>
+          </ul>
+          <a class="btn btn--primary" href="https://grammatik.deulern.com" rel="noopener">Open Grammatik mit System</a>
+        </li>
+
+        <li class="card">
+          <p class="card__num">02 — Vocabulary</p>
+          <h3 class="t-h3">Deutsch Wortschatz</h3>
+          <p>Words grouped by the situations you meet them in, with the article and plural attached from the start. Reviews come back just before you would have forgotten them.</p>
+          <ul class="chips">
+            <li class="chip">Themed word sets</li>
+            <li class="chip">Der / die / das drilled</li>
+            <li class="chip">Spaced review</li>
+          </ul>
+          <a class="btn btn--primary" href="https://wortschatz.deulern.com" rel="noopener">Open Deutsch Wortschatz</a>
+        </li>
+
+        <li class="card">
+          <p class="card__num">03 — Verbs</p>
+          <h3 class="t-h3">Deutsch Verben Meistern</h3>
+          <p>German verbs are where sentences fall apart. Practise them tense by tense — regular, irregular, separable and reflexive — until the right form arrives without thinking.</p>
+          <ul class="chips">
+            <li class="chip">All main tenses</li>
+            <li class="chip">Irregular forms</li>
+            <li class="chip">Separable prefixes</li>
+          </ul>
+          <a class="btn btn--primary" href="https://verben.deulern.com" rel="noopener">Open Deutsch Verben Meistern</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__head">
+        <p class="t-eyebrow">Why DeuLern</p>
+        <h2 class="t-h2">Practice, not friction.</h2>
+      </div>
+
+      <ul class="why">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 8a4 4 0 0 0-4-4h-2a3.5 3.5 0 0 0 0 7h2a3.5 3.5 0 0 1 0 7h-2a4 4 0 0 1-4-4"/></svg>
+          <b>Free, in full</b>
+          <p>Not a trial and not a teaser. Every exercise in every app is open from the first minute, with nothing held back for a paid tier.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM4 21a8 8 0 0 1 16 0"/><path d="m3 4 18 16"/></svg>
+          <b>No account</b>
+          <p>No email, no password, no confirmation link. Open an app and the first question is already on screen.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+          <b>Wherever you are</b>
+          <p>Runs in the browser on a phone in a queue or a laptop at a desk. Nothing to install, nothing to update.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <p class="t-eyebrow">FAQ</p>
+        <h2 class="t-h2">Questions worth asking.</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Are the apps really free?</summary>
+          <p>Yes. All three apps are free to use in full. There is no trial, no paid tier and nothing to unlock.</p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. Open an app and start practising straight away — there is no sign-up form and no email required.</p>
+        </details>
+        <details>
+          <summary>Which level are the apps for?</summary>
+          <p>They suit beginners through upper intermediate learners, roughly A1 to B1. Start with grammar if you are new, vocabulary if you already know the basics.</p>
+        </details>
+        <details>
+          <summary>Do they work on a phone?</summary>
+          <p>Yes. Every app runs in the browser and adapts to phone, tablet and desktop. There is nothing to install.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="band">
+        <div>
+          <h2 class="t-h3">Pick the one you keep getting wrong.</h2>
+          <p class="t-small">Grammar, vocabulary or verbs — start where it hurts and come back for the rest.</p>
+        </div>
+        <a class="btn btn--primary" href="#apps">Choose an app</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="wordmark" href="/">Deu<b>Lern</b></a>
+        <p class="t-small" style="margin-top:var(--s-sm);max-width:34ch">Free apps for learning German. Built for people who just want to practise.</p>
+      </div>
+      <div>
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://grammatik.deulern.com" rel="noopener">Grammatik mit System</a></li>
+          <li><a href="https://wortschatz.deulern.com" rel="noopener">Deutsch Wortschatz</a></li>
+          <li><a href="https://verben.deulern.com" rel="noopener">Deutsch Verben Meistern</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul>
+          <li><a href="#apps">The apps</a></li>
+          <li><a href="#why">Why DeuLern</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Language</h2>
+        <ul>
+          <li><a href="/" hreflang="en" aria-current="page">English</a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 DeuLern</span>
+      <span>Made for German learners.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
