@@ -347,9 +347,24 @@ body {
 }
 .stack__row:nth-child(2) { margin-left: clamp(0px, 3vw, 32px); }
 .stack__row:nth-child(3) { margin-left: clamp(0px, 6vw, 64px); }
-/* on the 404 pages the same rows are real links */
-a.stack__row { color: var(--on-surface); text-decoration: none; }
-a.stack__row:hover { border-color: var(--secondary); }
+/* the rows are real links to each app */
+a.stack__row {
+  color: var(--on-surface);
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+a.stack__row:hover,
+a.stack__row:focus-visible {
+  background: var(--surface-strong);
+  border-color: var(--secondary);
+}
+a.stack__row:hover .stack__glyph,
+a.stack__row:focus-visible .stack__glyph {
+  background: var(--secondary);
+  color: var(--on-accent);
+}
+a.stack__row:hover span span,
+a.stack__row:focus-visible span span { color: var(--on-surface); }
 .stack__glyph {
   flex: none;
   display: grid;
@@ -361,6 +376,7 @@ a.stack__row:hover { border-color: var(--secondary); }
   color: var(--primary);
   font-size: 20px;
   font-weight: 800;
+  transition: background .18s ease, color .18s ease;
 }
 .stack__row b { display: block; font-size: 17px; font-weight: 700; }
 .stack__row span { color: var(--on-surface-muted); font-size: 14px; }
