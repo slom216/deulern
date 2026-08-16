@@ -57,6 +57,17 @@ for (const { file, lang, url } of PAGES) {
       `${where} FAQ answer not visible on page: ${q.name}`);
   }
 
+  // raster icon fallbacks: crawlers and older browsers only ever probe /favicon.ico
+  assert.ok(html.includes('href="/favicon.ico"'), `${where} /favicon.ico not referenced`);
+  assert.ok(html.includes('href="/apple-touch-icon.png"'), `${where} apple-touch-icon not referenced`);
+
+  // trust signals — a reachable human is the one the audit actually scores
+  assert.ok(html.includes('mailto:hallo@deulern.com'), `${where} contact address missing`);
+
+  // sharing: plain links, so the only way they break is by disappearing
+  const shares = attrs('a')(html).filter(h => /x\.com\/intent|facebook\.com\/sharer|wa\.me|reddit\.com\/submit|^mailto:\?/.test(h));
+  assert.ok(shares.length >= 3, `${where} expected 3+ share links, found ${shares.length}`);
+
   // the theme toggle is inert without both halves — markup and the listener that reads it
   assert.ok(/<button class="theme-toggle"[^>]*aria-label="[^"]+"/.test(html),
     `${where} theme toggle button missing or unlabelled`);
@@ -80,8 +91,25 @@ assert.ok(readFileSync('public/robots.txt', 'utf8').includes(`${BASE}/sitemap.xm
   'robots.txt does not point at the sitemap');
 
 // referenced assets exist
-for (const f of ['public/styles.css', 'public/favicon.svg', 'public/fonts/manrope-var-latin.woff2']) {
+for (const f of ['public/styles.css', 'public/favicon.svg', 'public/favicon.ico',
+                 'public/apple-touch-icon.png', 'public/fonts/manrope-var-latin.woff2']) {
   assert.ok(existsSync(f), `missing asset ${f}`);
 }
 
-console.log('ok — SEO, hreflang, JSON-LD, anchors and assets all check out');
+// custom 404s — one per language, since Workers Assets serves the nearest 404.html.
+// Deliberately absent from sitemap.xml, so they are checked here instead of in PAGES.
+for (const f of ['public/404.html', 'public/de/404.html']) {
+  assert.ok(existsSync(f), `missing ${f}`);
+  const html = readFileSync(f, 'utf8');
+  assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `${f}: needs exactly one <h1>`);
+  assert.match(html, /<meta name="robots" content="noindex/, `${f}: must be noindex`);
+  assert.ok(html.includes('href="/styles.css"'), `${f}: not styled`);
+}
+assert.match(readFileSync('wrangler.toml', 'utf8'), /not_found_handling\s*=\s*"404-page"/,
+  'wrangler.toml does not wire up the custom 404 pages');
+
+// HSTS is set here rather than in the Cloudflare dashboard — set it in both and it ships twice
+assert.match(readFileSync('public/_headers', 'utf8'), /Strict-Transport-Security: max-age=\d+/,
+  '_headers is missing the HSTS header');
+
+console.log('ok — SEO, hreflang, JSON-LD, anchors, icons, sharing, 404s and headers all check out');

@@ -6,3 +6,5 @@ compatibility_date = "2026-08-15"
 # makes /de/ resolve to /de/index.html.
 [assets]
 directory = "./public"
+# serves the nearest 404.html — public/de/404.html for /de/*, public/404.html for everything else
+not_found_handling = "404-page"

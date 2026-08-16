@@ -347,6 +347,9 @@ body {
 }
 .stack__row:nth-child(2) { margin-left: clamp(0px, 3vw, 32px); }
 .stack__row:nth-child(3) { margin-left: clamp(0px, 6vw, 64px); }
+/* on the 404 pages the same rows are real links */
+a.stack__row { color: var(--on-surface); text-decoration: none; }
+a.stack__row:hover { border-color: var(--secondary); }
 .stack__glyph {
   flex: none;
   display: grid;
@@ -467,7 +470,8 @@ body {
   gap: var(--s-lg);
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
-.footer h2 {
+.footer h3,
+.footer__share-label {
   margin-bottom: var(--s-xs);
   font-size: 12px;
   font-weight: 700;
@@ -476,6 +480,33 @@ body {
   color: var(--on-surface-muted);
 }
 .footer li + li { margin-top: 6px; }
+
+/* who runs this, how to reach them, what we do not collect */
+.footer__meta {
+  display: grid;
+  gap: var(--s-xs);
+  max-width: 34ch;
+  margin-top: var(--s-sm);
+  color: var(--on-surface-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.footer__meta a { font-size: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+.footer__share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-xs) var(--s-sm);
+  margin-top: var(--s-lg);
+}
+.footer__share-label { margin-bottom: 0; }
+.footer__share .chip { text-decoration: none; }
+.footer__share .chip:hover {
+  background: var(--tertiary);
+  border-color: transparent;
+  color: var(--on-accent);
+}
 .footer a {
   color: var(--on-surface-muted);
   font-size: 15px;
