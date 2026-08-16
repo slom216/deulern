@@ -516,8 +516,10 @@ a.stack__row:focus-visible span span { color: var(--on-surface); }
   gap: var(--s-xs) var(--s-sm);
   margin-top: var(--s-lg);
 }
+.footer__share + .footer__share { margin-top: var(--s-sm); }
 .footer__share-label { margin-bottom: 0; }
-.footer__share .chip { text-decoration: none; }
+.footer__share .chip { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+.footer__share .chip svg { width: 14px; height: 14px; fill: currentColor; }
 .footer__share .chip:hover {
   background: var(--tertiary);
   border-color: transparent;
