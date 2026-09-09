@@ -112,4 +112,13 @@ assert.match(readFileSync('wrangler.toml', 'utf8'), /not_found_handling\s*=\s*"4
 assert.match(readFileSync('public/_headers', 'utf8'), /Strict-Transport-Security: max-age=\d+/,
   '_headers is missing the HSTS header');
 
+// analytics: consent-gated, so gtag must never be a plain script tag in the HTML
+const analytics = readFileSync('public/analytics.js', 'utf8');
+for (const f of ['public/index.html', 'public/de/index.html', 'public/404.html', 'public/de/404.html']) {
+  const html = readFileSync(f, 'utf8');
+  assert.ok(html.includes('src="/analytics.js"'), `${f}: analytics.js not loaded`);
+  assert.ok(!html.includes('googletagmanager'), `${f}: gtag must load via analytics.js after consent, not inline`);
+}
+assert.match(analytics, /GA_ID = 'G-[A-Z0-9]+'/, 'analytics.js has no GA4 measurement ID');
+
 console.log('ok — SEO, hreflang, JSON-LD, anchors, icons, sharing, 404s and headers all check out');
