@@ -1,4 +1,4 @@
-    if (loaded) return;/* GA4, gated on consent.
+/* GA4, gated on consent.
    Nothing is loaded from Google and no cookie is set until the visitor accepts.
    The choice is stored in localStorage and can be changed again from the footer link. */
 (() => {

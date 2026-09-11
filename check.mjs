@@ -3,6 +3,7 @@
 // ponytail: regex over raw HTML, no parser dep — fine for two hand-written files.
 import { readFileSync, existsSync } from 'node:fs';
 import assert from 'node:assert/strict';
+import { Script } from 'node:vm';
 
 const BASE = 'https://deulern.com';
 const APPS = ['grammatik', 'wortschatz', 'verben'].map(s => `https://${s}.deulern.com`);
@@ -120,5 +121,8 @@ for (const f of ['public/index.html', 'public/de/index.html', 'public/404.html',
   assert.ok(!html.includes('googletagmanager'), `${f}: gtag must load via analytics.js after consent, not inline`);
 }
 assert.match(analytics, /GA_ID = 'G-[A-Z0-9]+'/, 'analytics.js has no GA4 measurement ID');
+// browsers parse it as a classic script, where a stray top-level `return` kills the whole file
+// silently — `node --check` misses this because it wraps the source in a CommonJS function
+new Script(analytics);
 
 console.log('ok — SEO, hreflang, JSON-LD, anchors, icons, sharing, 404s and headers all check out');
