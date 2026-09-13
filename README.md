@@ -101,3 +101,8 @@ dig +short TXT deulern.com _dmarc.deulern.com
 
 - `og.png` (1200×630) for social sharing — the tags are in both pages, commented out. Until it
   exists, `twitter:card=summary_large_image` renders without an image.
+
+## Disclaimer
+
+This site and the apps it links to were built with the help of AI. They may contain errors.
+Every error we identify will be fixed. If you spot one, write to hallo@deulern.com.
