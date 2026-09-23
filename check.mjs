@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import { Script } from 'node:vm';
 
 const BASE = 'https://deulern.com';
-const APPS = ['grammatik', 'wortschatz', 'verben'].map(s => `https://${s}.deulern.com`);
+const APPS = ['grammatik', 'wortschatz', 'verben', 'lese'].map(s => `https://${s}.deulern.com`);
 const PAGES = [
   { file: 'public/index.html', lang: 'en', url: `${BASE}/` },
   { file: 'public/de/index.html', lang: 'de', url: `${BASE}/de/` },

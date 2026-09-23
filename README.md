@@ -1,6 +1,6 @@
 # DeuLern landing page
 
-Static landing page for the three free German-learning apps. Plain HTML + CSS —
+Static landing page for the four free German-learning apps. Plain HTML + CSS —
 no build step, no dependencies. The only JavaScript is the ~10 inline lines in each
 page's `<head>` that remember the light/dark choice.
 
