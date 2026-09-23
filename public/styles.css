@@ -443,9 +443,9 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
 }
 .card > :not(img) { margin-inline: 8px; }
 .card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  /* native size: the art is a 199×145 crop of the mockup and blurs if scaled up */
+  width: 199px;
+  align-self: center;
   border-radius: var(--r-sm);
   outline: 1px solid var(--print-frame);
 }
