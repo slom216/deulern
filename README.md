@@ -11,7 +11,8 @@ public/               everything that gets deployed
   404.html            English 404
   de/404.html         German 404 — Workers Assets serves the *nearest* 404.html
   styles.css          all design.md tokens live in the :root block at the top
-  fonts/              self-hosted Manrope (variable, latin subset)
+  fonts/              self-hosted Manrope (body) + Noto Serif Display condensed (headlines), latin subsets
+  img/                cubist artwork — pixel crops of the mockup, source set in NewLook/deulern-assets/
   favicon.svg         the source mark
   favicon.ico         16/32/48 raster fallback — crawlers only ever probe this path
   apple-touch-icon.png  180×180

@@ -29,12 +29,13 @@
 <meta name="twitter:title" content="DeuLern — Free Apps for Learning German">
 <meta name="twitter:description" content="Grammar, vocabulary, verbs and reading — four free German learning apps. No account, no cost.">
 
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f2530" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efe1c8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1b18" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/manrope-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 
 <script>
@@ -228,8 +229,7 @@
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__copy">
-        <p class="t-eyebrow">Four apps · Free forever</p>
-        <h1 class="t-display">Learn German for free forever.</h1>
+        <h1 class="t-display">Learn German <span class="accent">for free</span> forever.</h1>
         <p class="t-lead">Grammar, vocabulary, verbs and reading — each one its own focused app, each one free. Open a link and start practising. No account, no download, no upsell. No data will be sent to our servers, all data stays on your PC or mobile device.</p>
 
         <div class="hero__cta">
@@ -253,38 +253,24 @@
         </ul>
       </div>
 
-      <div class="stack">
-        <a class="stack__row" href="https://grammatik.deulern.com" rel="noopener">
-          <span class="stack__glyph">Gr</span>
-          <span><b>Grammatik mit System</b><span>Cases, tenses, word order</span></span>
-        </a>
-        <a class="stack__row" href="https://wortschatz.deulern.com" rel="noopener">
-          <span class="stack__glyph">Wo</span>
-          <span><b>Deutsch Wortschatz</b><span>Words that actually stay</span></span>
-        </a>
-        <a class="stack__row" href="https://verben.deulern.com" rel="noopener">
-          <span class="stack__glyph">Ve</span>
-          <span><b>Deutsch Verben Meistern</b><span>Every tense, drilled</span></span>
-        </a>
-        <a class="stack__row" href="https://lese.deulern.com" rel="noopener">
-          <span class="stack__glyph">Le</span>
-          <span><b>Lese Reise</b><span>Graded texts, A1 to B1</span></span>
-        </a>
-      </div>
+      <figure class="hero__art">
+        <img src="/img/hero-cubist.png" width="565" height="411" fetchpriority="high" alt="Cubist collage: a woman's profile beside a stack of books labelled Grammatik, Wortschatz, Verben and Lesen">
+      </figure>
     </div>
   </section>
 
-  <section class="section" id="apps">
+  <section class="section section--band" id="apps">
+    <img class="deco deco--sliver" src="/img/left-red-sliver.png" width="26" height="137" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="section__head">
         <p class="t-eyebrow">The apps</p>
-        <h2 class="t-h2">Four tools, one gap each.</h2>
+        <h2 class="t-h2"><span class="accent">Four tools,</span> one gap each.</h2>
         <p class="t-lead">Most learners get stuck on one thing at a time. Rather than one app that does everything adequately, each of these does a single job properly.</p>
       </div>
 
       <ul class="cards">
         <li class="card">
-          <p class="card__num">01 — Grammar</p>
+          <img src="/img/grammar.png" width="199" height="148" alt="" loading="lazy">
           <h3 class="t-h3">Grammatik mit System</h3>
           <p>The rules in an order that builds: cases, tenses, word order, subordinate clauses. Every rule is followed by exercises, so you find out immediately whether it landed.</p>
           <ul class="chips">
@@ -296,7 +282,7 @@
         </li>
 
         <li class="card">
-          <p class="card__num">02 — Vocabulary</p>
+          <img src="/img/vocabulary.png" width="204" height="148" alt="" loading="lazy">
           <h3 class="t-h3">Deutsch Wortschatz</h3>
           <p>Words grouped by the situations you meet them in, with the article and plural attached from the start. Reviews come back just before you would have forgotten them.</p>
           <ul class="chips">
@@ -308,7 +294,7 @@
         </li>
 
         <li class="card">
-          <p class="card__num">03 — Verbs</p>
+          <img src="/img/verbs.png" width="198" height="145" alt="" loading="lazy">
           <h3 class="t-h3">Deutsch Verben Meistern</h3>
           <p>German verbs are where sentences fall apart. Practise them tense by tense — regular, irregular, separable and reflexive — until the right form arrives without thinking.</p>
           <ul class="chips">
@@ -320,7 +306,7 @@
         </li>
 
         <li class="card">
-          <p class="card__num">04 — Reading</p>
+          <img src="/img/reading.png" width="201" height="148" alt="" loading="lazy">
           <h3 class="t-h3">Lese Reise</h3>
           <p>Short German texts graded by level, from A1 to B1. Unknown words are explained in a glossary, and questions after each text check whether you really understood it.</p>
           <ul class="chips">
@@ -335,25 +321,27 @@
   </section>
 
   <section class="section" id="why">
-    <div class="container">
+    <img class="deco deco--wedge" src="/img/left-red-wedge.png" width="44" height="200" alt="" aria-hidden="true" loading="lazy">
+    <img class="deco deco--panel" src="/img/small-steps-panel.png" width="171" height="253" alt="" aria-hidden="true" loading="lazy">
+    <div class="container why-wrap">
       <div class="section__head">
         <p class="t-eyebrow">Why DeuLern</p>
-        <h2 class="t-h2">Practice, not friction.</h2>
+        <h2 class="t-h2"><span class="accent">Practice,</span> not friction.</h2>
       </div>
 
       <ul class="why">
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 8a4 4 0 0 0-4-4h-2a3.5 3.5 0 0 0 0 7h2a3.5 3.5 0 0 1 0 7h-2a4 4 0 0 1-4-4"/></svg>
+          <img src="/img/free.png" width="71" height="70" alt="" loading="lazy">
           <b>Free, in full</b>
           <p>Not a trial and not a teaser. Every exercise in every app is open from the first minute, with nothing held back for a paid tier.</p>
         </li>
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM4 21a8 8 0 0 1 16 0"/><path d="m3 4 18 16"/></svg>
+          <img src="/img/no-account.png" width="64" height="64" alt="" loading="lazy">
           <b>No account</b>
           <p>No email, no password, no confirmation link. Open an app and the first question is already on screen.</p>
         </li>
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+          <img src="/img/devices.png" width="83" height="67" alt="" loading="lazy">
           <b>Wherever you are</b>
           <p>Runs in the browser on a phone in a queue or a laptop at a desk. Nothing to install, nothing to update.</p>
         </li>
@@ -362,7 +350,9 @@
   </section>
 
   <section class="section" id="faq">
-    <div class="container">
+    <div class="container faq-wrap">
+      <img class="deco-stairs" src="/img/staircase.png" width="341" height="351" alt="" aria-hidden="true" loading="lazy">
+      <div>
       <div class="section__head">
         <p class="t-eyebrow">FAQ</p>
         <h2 class="t-h2">Questions worth asking.</h2>
@@ -402,10 +392,12 @@
           <p>Yes, this is only the beginning. We have in plan adding comic books for easy reading, sentence construction, article practicing, cases practicing, practacing translations, practicing reading and understanding, etc.</p>
         </details>
       </div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--cta">
+    <img class="deco deco--panel" src="/img/more-german-panel.png" width="184" height="195" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="band">
         <div>

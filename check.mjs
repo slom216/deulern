@@ -78,6 +78,11 @@ for (const { file, lang, url } of PAGES) {
   for (const href of attrs('a')(html).filter(h => h.startsWith('#'))) {
     assert.ok(html.includes(`id="${href.slice(1)}"`), `${where} dead anchor ${href}`);
   }
+
+  // artwork must ship — a missing PNG is a silent hole in the layout
+  for (const src of all(/<img[^>]*?src="(\/[^"]+)"/g)(html)) {
+    assert.ok(existsSync('public' + src), `${where} missing image ${src}`);
+  }
 }
 
 // sitemap URLs must map to files that actually ship
@@ -93,7 +98,8 @@ assert.ok(readFileSync('public/robots.txt', 'utf8').includes(`${BASE}/sitemap.xm
 
 // referenced assets exist
 for (const f of ['public/styles.css', 'public/favicon.svg', 'public/favicon.ico',
-                 'public/apple-touch-icon.png', 'public/fonts/manrope-var-latin.woff2']) {
+                 'public/apple-touch-icon.png', 'public/fonts/manrope-var-latin.woff2',
+                 'public/fonts/serif-display-latin.woff2']) {
   assert.ok(existsSync(f), `missing asset ${f}`);
 }
 

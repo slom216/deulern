@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-09-23T11:56:48.087Z",
+        "reason": "Claude: detector does not resolve var(--s-md) padding; headless screenshots show 28px inset beside rules and a centered 68px header"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/de/index.html"
+        ],
+        "createdAt": "2026-09-23T11:56:48.114Z",
+        "reason": "Claude: detector does not resolve var(--s-md) padding; headless screenshots show 28px inset beside rules and a centered 68px header"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-09-23T11:56:48.140Z",
+        "reason": "Claude: detector does not resolve var(--s-md) padding; headless screenshots show 28px inset beside rules and a centered 68px header"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/de/404.html"
+        ],
+        "createdAt": "2026-09-23T11:56:48.171Z",
+        "reason": "Claude: detector does not resolve var(--s-md) padding; headless screenshots show 28px inset beside rules and a centered 68px header"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-09-23T11:56:48.198Z",
+        "reason": "Claude: h1 is clamp(44px,6.4vw,78px), detector cannot resolve clamp and reads 24px as max"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "public/de/404.html"
+        ],
+        "createdAt": "2026-09-23T11:56:48.228Z",
+        "reason": "Claude: h1 is clamp(44px,6.4vw,78px), detector cannot resolve clamp and reads 24px as max"
+      }
+    ]
+  }
+}

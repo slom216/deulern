@@ -29,12 +29,13 @@
 <meta name="twitter:title" content="DeuLern — Kostenlose Apps zum Deutschlernen">
 <meta name="twitter:description" content="Grammatik, Wortschatz, Verben und Lesen — vier kostenlose Apps zum Deutschlernen. Ohne Konto, ohne Kosten.">
 
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f2530" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efe1c8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1b18" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/manrope-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 
 <script>
@@ -213,8 +214,7 @@
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__copy">
-        <p class="t-eyebrow">Vier Apps · Dauerhaft kostenlos</p>
-        <h1 class="t-display">Deutsch lernen, ohne zu bezahlen.</h1>
+        <h1 class="t-display">Deutsch lernen, <span class="accent">ohne zu bezahlen.</span></h1>
         <p class="t-lead">Grammatik, Wortschatz, Verben und Lesen — jeweils eine eigene App, jede davon kostenlos. Link öffnen und üben. Kein Konto, kein Download, kein Upselling.</p>
 
         <div class="hero__cta">
@@ -238,38 +238,24 @@
         </ul>
       </div>
 
-      <div class="stack">
-        <a class="stack__row" href="https://grammatik.deulern.com" rel="noopener">
-          <span class="stack__glyph">Gr</span>
-          <span><b>Grammatik mit System</b><span>Fälle, Zeiten, Satzstellung</span></span>
-        </a>
-        <a class="stack__row" href="https://wortschatz.deulern.com" rel="noopener">
-          <span class="stack__glyph">Wo</span>
-          <span><b>Deutsch Wortschatz</b><span>Wörter, die hängen bleiben</span></span>
-        </a>
-        <a class="stack__row" href="https://verben.deulern.com" rel="noopener">
-          <span class="stack__glyph">Ve</span>
-          <span><b>Deutsch Verben Meistern</b><span>Jede Zeitform, geübt</span></span>
-        </a>
-        <a class="stack__row" href="https://lese.deulern.com" rel="noopener">
-          <span class="stack__glyph">Le</span>
-          <span><b>Lese Reise</b><span>Lesetexte von A1 bis B1</span></span>
-        </a>
-      </div>
+      <figure class="hero__art">
+        <img src="/img/hero-cubist.png" width="565" height="411" fetchpriority="high" alt="Kubistische Collage: ein Frauenprofil neben einem Bücherstapel mit den Titeln Grammatik, Wortschatz, Verben und Lesen">
+      </figure>
     </div>
   </section>
 
-  <section class="section" id="apps">
+  <section class="section section--band" id="apps">
+    <img class="deco deco--sliver" src="/img/left-red-sliver.png" width="26" height="137" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="section__head">
         <p class="t-eyebrow">Die Apps</p>
-        <h2 class="t-h2">Vier Deutsch-Apps, je eine Lücke.</h2>
+        <h2 class="t-h2"><span class="accent">Vier Deutsch-Apps,</span> je eine Lücke.</h2>
         <p class="t-lead">Die meisten Lernenden hängen an einer Sache fest. Statt einer App, die alles halbwegs kann, macht hier jede genau eine Sache richtig.</p>
       </div>
 
       <ul class="cards">
         <li class="card">
-          <p class="card__num">01 — Grammatik</p>
+          <img src="/img/grammar.png" width="199" height="148" alt="" loading="lazy">
           <h3 class="t-h3">Grammatik mit System</h3>
           <p>Die Regeln in einer Reihenfolge, die aufeinander aufbaut: Fälle, Zeiten, Satzstellung, Nebensätze. Nach jeder Regel folgen Übungen — so zeigt sich sofort, ob sie sitzt.</p>
           <ul class="chips">
@@ -281,7 +267,7 @@
         </li>
 
         <li class="card">
-          <p class="card__num">02 — Wortschatz</p>
+          <img src="/img/vocabulary.png" width="204" height="148" alt="" loading="lazy">
           <h3 class="t-h3">Deutsch Wortschatz</h3>
           <p>Wörter nach Situationen gruppiert, Artikel und Plural von Anfang an dabei. Die Wiederholung kommt genau dann, bevor das Wort wieder verschwunden wäre.</p>
           <ul class="chips">
@@ -293,7 +279,7 @@
         </li>
 
         <li class="card">
-          <p class="card__num">03 — Verben</p>
+          <img src="/img/verbs.png" width="198" height="145" alt="" loading="lazy">
           <h3 class="t-h3">Deutsch Verben Meistern</h3>
           <p>An den Verben scheitern die meisten Sätze. Hier werden sie Zeitform für Zeitform geübt — regelmäßig, unregelmäßig, trennbar und reflexiv — bis die richtige Form von selbst kommt.</p>
           <ul class="chips">
@@ -305,7 +291,7 @@
         </li>
 
         <li class="card">
-          <p class="card__num">04 — Lesen</p>
+          <img src="/img/reading.png" width="201" height="148" alt="" loading="lazy">
           <h3 class="t-h3">Lese Reise</h3>
           <p>Kurze deutsche Texte nach Niveau, von A1 bis B1. Unbekannte Wörter erklärt ein Glossar, und Fragen nach jedem Text zeigen, ob du ihn wirklich verstanden hast.</p>
           <ul class="chips">
@@ -320,25 +306,27 @@
   </section>
 
   <section class="section" id="why">
-    <div class="container">
+    <img class="deco deco--wedge" src="/img/left-red-wedge.png" width="44" height="200" alt="" aria-hidden="true" loading="lazy">
+    <img class="deco deco--panel" src="/img/small-steps-panel.png" width="171" height="253" alt="" aria-hidden="true" loading="lazy">
+    <div class="container why-wrap">
       <div class="section__head">
         <p class="t-eyebrow">Warum DeuLern</p>
-        <h2 class="t-h2">Üben statt Hürden.</h2>
+        <h2 class="t-h2"><span class="accent">Üben</span> statt Hürden.</h2>
       </div>
 
       <ul class="why">
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 8a4 4 0 0 0-4-4h-2a3.5 3.5 0 0 0 0 7h2a3.5 3.5 0 0 1 0 7h-2a4 4 0 0 1-4-4"/></svg>
+          <img src="/img/free.png" width="71" height="70" alt="" loading="lazy">
           <b>Vollständig kostenlos</b>
           <p>Keine Testphase, kein Anreißer. Jede Übung in jeder App ist ab der ersten Minute offen, nichts bleibt für eine Bezahlversion zurück.</p>
         </li>
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM4 21a8 8 0 0 1 16 0"/><path d="m3 4 18 16"/></svg>
+          <img src="/img/no-account.png" width="64" height="64" alt="" loading="lazy">
           <b>Kein Konto</b>
           <p>Keine E-Mail, kein Passwort, kein Bestätigungslink. App öffnen — die erste Frage steht schon da.</p>
         </li>
         <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+          <img src="/img/devices.png" width="83" height="67" alt="" loading="lazy">
           <b>Überall einsetzbar</b>
           <p>Läuft im Browser — auf dem Handy in der Schlange oder am Laptop am Schreibtisch. Nichts installieren, nichts aktualisieren.</p>
         </li>
@@ -347,7 +335,9 @@
   </section>
 
   <section class="section" id="faq">
-    <div class="container">
+    <div class="container faq-wrap">
+      <img class="deco-stairs" src="/img/staircase.png" width="341" height="351" alt="" aria-hidden="true" loading="lazy">
+      <div>
       <div class="section__head">
         <p class="t-eyebrow">FAQ</p>
         <h2 class="t-h2">Fragen, die sich lohnen.</h2>
@@ -375,10 +365,12 @@
           <p>Ja. Alle Apps und ihre Inhalte wurden mit KI erstellt und von Menschen geprüft, daher können Fehler vorkommen. Jeder gefundene Fehler wird behoben. Sobald unsere Community wächst, werden wir die Inhalte gemeinsam gegenlesen, um sie noch besser zu machen.</p>
         </details>
       </div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--cta">
+    <img class="deco deco--panel" src="/img/more-german-panel.png" width="184" height="195" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="band">
         <div>

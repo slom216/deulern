@@ -73,11 +73,12 @@
 .consent{position:fixed;left:var(--s-sm);right:var(--s-sm);bottom:var(--s-sm);z-index:99;
   max-width:640px;margin-inline:auto;padding:var(--s-sm) var(--s-md);
   display:flex;flex-wrap:wrap;gap:var(--s-sm);align-items:center;justify-content:space-between;
-  background:var(--neutral);border:1px solid var(--border);border-radius:var(--r-lg);
-  box-shadow:0 8px 32px var(--glow-cyan);color:var(--on-surface)}
+  background:var(--paper);border:1px solid var(--rule-strong);border-radius:var(--r-md);
+  box-shadow:0 8px 32px #0003;color:var(--ink)}
 .consent p{margin:0;flex:1 1 240px;font-size:.875rem;line-height:1.5}
 .consent__btns{display:flex;gap:var(--s-xs)}
-.consent .btn{padding:8px 16px;font-size:.875rem}`;
+.consent .btn{padding:8px 16px;font-size:.875rem}
+.consent .btn::after{content:none}`;
   document.head.appendChild(style);
 
   const choice = (() => { try { return localStorage[KEY]; } catch { return undefined; } })();
