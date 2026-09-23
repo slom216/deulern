@@ -29,13 +29,14 @@
 <meta name="twitter:title" content="DeuLern — Kostenlose Apps zum Deutschlernen">
 <meta name="twitter:description" content="Grammatik, Wortschatz, Verben und Lesen — vier kostenlose Apps zum Deutschlernen. Ohne Konto, ohne Kosten.">
 
-<meta name="theme-color" content="#efe1c8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1d1b18" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#e6ddcc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/manrope-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/serif-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/outfit-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/oswald-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 
 <script>
@@ -174,7 +175,12 @@
 
 <header class="header">
   <div class="container header__inner">
-    <a class="wordmark" href="/de/">Deu<b>Lern</b></a>
+    <a class="wordmark" href="/de/"><img src="/img/logo-mark.png" width="35" height="37" alt="">DeuLern</a>
+    <nav class="nav" aria-label="Seite">
+      <a href="#apps">Apps</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">Über uns</a>
+    </nav>
 
     <button class="theme-toggle" type="button" aria-label="Zwischen hellem und dunklem Design wechseln">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -185,24 +191,9 @@
 
     <a class="lang lang--de" href="/" hreflang="en" lang="en" aria-label="View this page in English">
       <span class="lang__opt lang__opt--en">
-        <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
-          <rect width="20" height="14" fill="#fff"/>
-          <g fill="#b22234">
-            <rect width="20" height="1.08" y="0"/><rect width="20" height="1.08" y="2.15"/>
-            <rect width="20" height="1.08" y="4.31"/><rect width="20" height="1.08" y="6.46"/>
-            <rect width="20" height="1.08" y="8.62"/><rect width="20" height="1.08" y="10.77"/>
-            <rect width="20" height="1.08" y="12.92"/>
-          </g>
-          <rect width="8" height="7.54" fill="#3c3b6e"/>
-        </svg>
         EN
       </span>
       <span class="lang__opt lang__opt--de">
-        <svg viewBox="0 0 20 14" aria-hidden="true" focusable="false">
-          <rect width="20" height="4.67" y="0" fill="#000"/>
-          <rect width="20" height="4.67" y="4.67" fill="#d00"/>
-          <rect width="20" height="4.66" y="9.34" fill="#ffce00"/>
-        </svg>
         DE
       </span>
     </a>
@@ -239,23 +230,23 @@
       </div>
 
       <figure class="hero__art">
-        <img src="/img/hero-cubist.png" width="565" height="411" fetchpriority="high" alt="Kubistische Collage: ein Frauenprofil neben einem Bücherstapel mit den Titeln Grammatik, Wortschatz, Verben und Lesen">
+        <img src="/img/hero.png" width="502" height="419" fetchpriority="high" alt="Kubistische Collage: ein Frauenprofil neben einem Bücherstapel mit den Titeln Grammatik, Wortschatz, Verben und Lesen">
       </figure>
     </div>
   </section>
 
-  <section class="section section--band" id="apps">
-    <img class="deco deco--sliver" src="/img/left-red-sliver.png" width="26" height="137" alt="" aria-hidden="true" loading="lazy">
+  <section class="section" id="apps">
+    <img class="deco" src="/img/left-red-wedge.png" width="31" height="187" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="section__head">
-        <p class="t-eyebrow">Die Apps</p>
+        <p class="t-eyebrow t-eyebrow--rule">Die Apps</p>
         <h2 class="t-h2"><span class="accent">Vier Deutsch-Apps,</span> je eine Lücke.</h2>
         <p class="t-lead">Die meisten Lernenden hängen an einer Sache fest. Statt einer App, die alles halbwegs kann, macht hier jede genau eine Sache richtig.</p>
       </div>
 
       <ul class="cards">
         <li class="card">
-          <img src="/img/grammar.png" width="199" height="145" alt="" loading="lazy">
+          <img src="/img/grammar.png" width="207" height="156" alt="" loading="lazy">
           <h3 class="t-h3">Grammatik mit System</h3>
           <p>Die Regeln in einer Reihenfolge, die aufeinander aufbaut: Fälle, Zeiten, Satzstellung, Nebensätze. Nach jeder Regel folgen Übungen — so zeigt sich sofort, ob sie sitzt.</p>
           <ul class="chips">
@@ -267,7 +258,7 @@
         </li>
 
         <li class="card">
-          <img src="/img/vocabulary.png" width="199" height="145" alt="" loading="lazy">
+          <img src="/img/vocabulary.png" width="204" height="156" alt="" loading="lazy">
           <h3 class="t-h3">Deutsch Wortschatz</h3>
           <p>Wörter nach Situationen gruppiert, Artikel und Plural von Anfang an dabei. Die Wiederholung kommt genau dann, bevor das Wort wieder verschwunden wäre.</p>
           <ul class="chips">
@@ -279,7 +270,7 @@
         </li>
 
         <li class="card">
-          <img src="/img/verbs.png" width="199" height="145" alt="" loading="lazy">
+          <img src="/img/verbs.png" width="202" height="155" alt="" loading="lazy">
           <h3 class="t-h3">Deutsch Verben Meistern</h3>
           <p>An den Verben scheitern die meisten Sätze. Hier werden sie Zeitform für Zeitform geübt — regelmäßig, unregelmäßig, trennbar und reflexiv — bis die richtige Form von selbst kommt.</p>
           <ul class="chips">
@@ -291,7 +282,7 @@
         </li>
 
         <li class="card">
-          <img src="/img/reading.png" width="199" height="145" alt="" loading="lazy">
+          <img src="/img/reading.png" width="210" height="157" alt="" loading="lazy">
           <h3 class="t-h3">Lese Reise</h3>
           <p>Kurze deutsche Texte nach Niveau, von A1 bis B1. Unbekannte Wörter erklärt ein Glossar, und Fragen nach jedem Text zeigen, ob du ihn wirklich verstanden hast.</p>
           <ul class="chips">
@@ -305,10 +296,9 @@
     </div>
   </section>
 
-  <section class="section" id="why">
-    <img class="deco deco--wedge" src="/img/left-red-wedge.png" width="44" height="200" alt="" aria-hidden="true" loading="lazy">
-    <img class="deco deco--panel" src="/img/small-steps-panel.png" width="171" height="253" alt="" aria-hidden="true" loading="lazy">
-    <div class="container why-wrap">
+  <div class="duo">
+  <section class="section container duo__row" id="why">
+    <img class="deco" src="/img/left-blue-strip.png" width="30" height="184" alt="" aria-hidden="true" loading="lazy">
       <div class="section__head">
         <p class="t-eyebrow">Warum DeuLern</p>
         <h2 class="t-h2"><span class="accent">Üben</span> statt Hürden.</h2>
@@ -316,30 +306,28 @@
 
       <ul class="why">
         <li>
-          <img src="/img/free.png" width="71" height="70" alt="" loading="lazy">
+          <img src="/img/free-book.png" width="93" height="93" alt="" loading="lazy">
           <b>Vollständig kostenlos</b>
           <p>Keine Testphase, kein Anreißer. Jede Übung in jeder App ist ab der ersten Minute offen, nichts bleibt für eine Bezahlversion zurück.</p>
         </li>
         <li>
-          <img src="/img/no-account.png" width="64" height="64" alt="" loading="lazy">
+          <img src="/img/no-account.png" width="94" height="94" alt="" loading="lazy">
           <b>Kein Konto</b>
           <p>Keine E-Mail, kein Passwort, kein Bestätigungslink. App öffnen — die erste Frage steht schon da.</p>
         </li>
         <li>
-          <img src="/img/devices.png" width="83" height="67" alt="" loading="lazy">
+          <img src="/img/devices.png" width="102" height="96" alt="" loading="lazy">
           <b>Überall einsetzbar</b>
           <p>Läuft im Browser — auf dem Handy in der Schlange oder am Laptop am Schreibtisch. Nichts installieren, nichts aktualisieren.</p>
         </li>
       </ul>
-    </div>
   </section>
 
-  <section class="section" id="faq">
-    <div class="container faq-wrap">
-      <img class="deco-stairs" src="/img/staircase.png" width="341" height="351" alt="" aria-hidden="true" loading="lazy">
+  <section class="section container duo__row" id="faq">
+      <img class="deco-stairs" src="/img/staircase.png" width="342" height="284" alt="" aria-hidden="true" loading="lazy">
       <div>
       <div class="section__head">
-        <p class="t-eyebrow">FAQ</p>
+        <p class="t-eyebrow t-eyebrow--rule">FAQ</p>
         <h2 class="t-h2">Fragen, die sich lohnen.</h2>
       </div>
 
@@ -366,11 +354,11 @@
         </details>
       </div>
       </div>
-    </div>
   </section>
+  </div>
 
   <section class="section section--cta">
-    <img class="deco deco--panel" src="/img/more-german-panel.png" width="184" height="195" alt="" aria-hidden="true" loading="lazy">
+    <img class="deco" src="/img/footer-corner.png" width="212" height="190" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="band">
         <div>
@@ -387,8 +375,8 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
-      <div>
-        <a class="wordmark" href="/de/">Deu<b>Lern</b></a>
+      <div id="about">
+        <a class="wordmark" href="/de/">DeuLern</a>
         <p class="t-small" style="margin-top:var(--s-sm);max-width:34ch">Kostenlose Apps zum Deutschlernen. Gemacht für alle, die einfach üben wollen.</p>
         <div class="footer__meta">
           <span>Betrieben von Slobodan Marković.</span>
@@ -422,6 +410,8 @@
         </ul>
       </div>
     </div>
+
+    <div class="footer__social">
     <div class="footer__share">
       <span class="footer__share-label">Community</span>
       <a class="chip" href="https://discord.gg/U4TxE2GTBU" target="_blank" rel="noopener" aria-label="Dem DeuLern-Discord beitreten"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.317 4.3697a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>Discord</a>
@@ -429,11 +419,12 @@
 
     <div class="footer__share">
       <span class="footer__share-label">DeuLern teilen</span>
-      <a class="chip" href="https://x.com/intent/post?url=https%3A%2F%2Fdeulern.com%2Fde%2F&amp;text=Kostenlose%20Apps%20zum%20Deutschlernen.%20Ohne%20Konto%2C%20ohne%20Kosten." target="_blank" rel="noopener" aria-label="DeuLern auf X teilen">X</a>
-      <a class="chip" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdeulern.com%2Fde%2F" target="_blank" rel="noopener" aria-label="DeuLern auf Facebook teilen">Facebook</a>
-      <a class="chip" href="https://wa.me/?text=Kostenlose%20Apps%20zum%20Deutschlernen.%20Ohne%20Konto%2C%20ohne%20Kosten.%20https%3A%2F%2Fdeulern.com%2Fde%2F" target="_blank" rel="noopener" aria-label="DeuLern über WhatsApp teilen">WhatsApp</a>
-      <a class="chip" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdeulern.com%2Fde%2F&amp;title=Kostenlose%20Apps%20zum%20Deutschlernen" target="_blank" rel="noopener" aria-label="DeuLern auf Reddit teilen">Reddit</a>
-      <a class="chip" href="mailto:?subject=Kostenlose%20Apps%20zum%20Deutschlernen&amp;body=Vier%20kostenlose%20Apps%20zum%20Deutschlernen%2C%20ohne%20Konto%3A%20https%3A%2F%2Fdeulern.com%2Fde%2F" aria-label="DeuLern per E-Mail teilen">E-Mail</a>
+      <a class="chip" href="https://x.com/intent/post?url=https%3A%2F%2Fdeulern.com%2Fde%2F&amp;text=Kostenlose%20Apps%20zum%20Deutschlernen.%20Ohne%20Konto%2C%20ohne%20Kosten." target="_blank" rel="noopener" aria-label="DeuLern auf X teilen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>X</a>
+      <a class="chip" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdeulern.com%2Fde%2F" target="_blank" rel="noopener" aria-label="DeuLern auf Facebook teilen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>Facebook</a>
+      <a class="chip" href="https://wa.me/?text=Kostenlose%20Apps%20zum%20Deutschlernen.%20Ohne%20Konto%2C%20ohne%20Kosten.%20https%3A%2F%2Fdeulern.com%2Fde%2F" target="_blank" rel="noopener" aria-label="DeuLern über WhatsApp teilen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+      <a class="chip" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdeulern.com%2Fde%2F&amp;title=Kostenlose%20Apps%20zum%20Deutschlernen" target="_blank" rel="noopener" aria-label="DeuLern auf Reddit teilen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z"/></svg>Reddit</a>
+      <a class="chip" href="mailto:?subject=Kostenlose%20Apps%20zum%20Deutschlernen&amp;body=Vier%20kostenlose%20Apps%20zum%20Deutschlernen%2C%20ohne%20Konto%3A%20https%3A%2F%2Fdeulern.com%2Fde%2F" aria-label="DeuLern per E-Mail teilen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 5h20v14H2Zm2 2v.5l8 5.5 8-5.5V7Zm16 2.9-8 5.5-8-5.5V17h16Z"/></svg>E-Mail</a>
+    </div>
     </div>
 
     <div class="footer__bottom">

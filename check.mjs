@@ -99,7 +99,8 @@ assert.ok(readFileSync('public/robots.txt', 'utf8').includes(`${BASE}/sitemap.xm
 // referenced assets exist
 for (const f of ['public/styles.css', 'public/favicon.svg', 'public/favicon.ico',
                  'public/apple-touch-icon.png', 'public/fonts/manrope-var-latin.woff2',
-                 'public/fonts/serif-display-latin.woff2']) {
+                 'public/fonts/outfit-800-latin.woff2',
+                 'public/fonts/oswald-600-latin.woff2']) {
   assert.ok(existsSync(f), `missing asset ${f}`);
 }
 

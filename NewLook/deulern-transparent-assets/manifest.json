@@ -1,0 +1,713 @@
+{
+  "source": {
+    "width": 964,
+    "height": 1632,
+    "mode": "RGBA"
+  },
+  "coordinates": "left, top, right, bottom; right/bottom exclusive",
+  "assets": [
+    {
+      "file": "artwork/hero.png",
+      "size": [
+        502,
+        419
+      ],
+      "source_box": [
+        462,
+        0,
+        964,
+        419
+      ],
+      "description": "Complete hero illustration. Page copy and language switch are excluded; retained source alpha is unchanged.",
+      "boundary_mask": [
+        [
+          518,
+          0
+        ],
+        [
+          766,
+          0
+        ],
+        [
+          770,
+          58
+        ],
+        [
+          964,
+          58
+        ],
+        [
+          964,
+          419
+        ],
+        [
+          510,
+          419
+        ],
+        [
+          510,
+          391
+        ],
+        [
+          462,
+          375
+        ],
+        [
+          462,
+          217
+        ],
+        [
+          510,
+          210
+        ],
+        [
+          518,
+          170
+        ]
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "apps/grammar.png",
+      "size": [
+        207,
+        156
+      ],
+      "source_box": [
+        39,
+        539,
+        246,
+        695
+      ],
+      "description": "App art with original transparency. Source section number remains where it overlaps artwork.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "apps/vocabulary.png",
+      "size": [
+        204,
+        156
+      ],
+      "source_box": [
+        269,
+        539,
+        473,
+        695
+      ],
+      "description": "App art with original transparency. Source section number remains where it overlaps artwork.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "apps/verbs.png",
+      "size": [
+        202,
+        155
+      ],
+      "source_box": [
+        493,
+        540,
+        695,
+        695
+      ],
+      "description": "App art with original transparency. Source section number remains where it overlaps artwork.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "apps/reading.png",
+      "size": [
+        210,
+        157
+      ],
+      "source_box": [
+        723,
+        538,
+        933,
+        695
+      ],
+      "description": "App art with original transparency. Source section number remains where it overlaps artwork.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "benefits/free-book.png",
+      "size": [
+        93,
+        93
+      ],
+      "source_box": [
+        386,
+        926,
+        479,
+        1019
+      ],
+      "description": "Benefit icon on existing transparent background.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "benefits/no-account.png",
+      "size": [
+        94,
+        94
+      ],
+      "source_box": [
+        585,
+        925,
+        679,
+        1019
+      ],
+      "description": "Benefit icon on existing transparent background.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "benefits/devices.png",
+      "size": [
+        102,
+        96
+      ],
+      "source_box": [
+        785,
+        925,
+        887,
+        1021
+      ],
+      "description": "Benefit icon on existing transparent background.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "artwork/staircase.png",
+      "size": [
+        342,
+        284
+      ],
+      "source_box": [
+        0,
+        1098,
+        342,
+        1382
+      ],
+      "description": "Staircase, arch and printed caption. Source transparency preserved.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "decorations/footer-corner.png",
+      "size": [
+        212,
+        190
+      ],
+      "source_box": [
+        752,
+        1368,
+        964,
+        1558
+      ],
+      "description": "Black slogan panel and blue/yellow geometric corner.",
+      "boundary_mask": [
+        [
+          934,
+          1368
+        ],
+        [
+          964,
+          1368
+        ],
+        [
+          964,
+          1558
+        ],
+        [
+          752,
+          1558
+        ],
+        [
+          752,
+          1529
+        ],
+        [
+          786,
+          1471
+        ],
+        [
+          829,
+          1466
+        ],
+        [
+          829,
+          1382
+        ]
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "decorations/left-blue-strip.png",
+      "size": [
+        30,
+        184
+      ],
+      "source_box": [
+        0,
+        918,
+        30,
+        1102
+      ],
+      "description": "Blue section-edge strip.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "decorations/left-red-wedge.png",
+      "size": [
+        31,
+        187
+      ],
+      "source_box": [
+        0,
+        395,
+        31,
+        582
+      ],
+      "description": "Red edge accent without nearby heading.",
+      "boundary_mask": [
+        [
+          0,
+          395
+        ],
+        [
+          30,
+          395
+        ],
+        [
+          5,
+          559
+        ],
+        [
+          0,
+          582
+        ]
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "branding/logo-mark.png",
+      "size": [
+        35,
+        37
+      ],
+      "source_box": [
+        33,
+        8,
+        68,
+        45
+      ],
+      "description": "Four-square brand mark.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "branding/wordmark.png",
+      "size": [
+        151,
+        35
+      ],
+      "source_box": [
+        74,
+        8,
+        225,
+        43
+      ],
+      "description": "DeuLern raster wordmark.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "details/hero-books.png",
+      "size": [
+        185,
+        187
+      ],
+      "source_box": [
+        463,
+        204,
+        648,
+        391
+      ],
+      "description": "Optional close crop, overlapping hero; not an independent source layer.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "details/hero-profile.png",
+      "size": [
+        188,
+        212
+      ],
+      "source_box": [
+        540,
+        6,
+        728,
+        218
+      ],
+      "description": "Optional close crop, overlapping hero; not an independent source layer.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        252,
+        254
+      ]
+    },
+    {
+      "file": "details/brandenburg-gate.png",
+      "size": [
+        133,
+        121
+      ],
+      "source_box": [
+        821,
+        184,
+        954,
+        305
+      ],
+      "description": "Optional close crop, overlapping hero; not an independent source layer.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "file": "ui-icons/checkmark.png",
+      "size": [
+        19,
+        20
+      ],
+      "source_box": [
+        40,
+        346,
+        59,
+        366
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-icons/arrow-light.png",
+      "size": [
+        17,
+        18
+      ],
+      "source_box": [
+        174,
+        304,
+        191,
+        322
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        253,
+        253
+      ]
+    },
+    {
+      "file": "ui-icons/arrow-dark.png",
+      "size": [
+        18,
+        21
+      ],
+      "source_box": [
+        738,
+        1415,
+        756,
+        1436
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        253,
+        254
+      ]
+    },
+    {
+      "file": "ui-icons/plus.png",
+      "size": [
+        19,
+        18
+      ],
+      "source_box": [
+        902,
+        1187,
+        921,
+        1205
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        246,
+        253
+      ]
+    },
+    {
+      "file": "ui-icons/discord.png",
+      "size": [
+        19,
+        18
+      ],
+      "source_box": [
+        313,
+        1591,
+        332,
+        1609
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-icons/facebook.png",
+      "size": [
+        14,
+        20
+      ],
+      "source_box": [
+        420,
+        1590,
+        434,
+        1610
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        1,
+        254
+      ]
+    },
+    {
+      "file": "ui-icons/whatsapp.png",
+      "size": [
+        16,
+        20
+      ],
+      "source_box": [
+        504,
+        1590,
+        520,
+        1610
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "ui-icons/reddit.png",
+      "size": [
+        19,
+        20
+      ],
+      "source_box": [
+        582,
+        1590,
+        601,
+        1610
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-icons/email.png",
+      "size": [
+        17,
+        20
+      ],
+      "source_box": [
+        652,
+        1590,
+        669,
+        1610
+      ],
+      "description": "Small original symbol; use vector icons for sharp production UI.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        7,
+        254
+      ]
+    },
+    {
+      "file": "ui-references/primary-button.png",
+      "size": [
+        184,
+        54
+      ],
+      "source_box": [
+        35,
+        284,
+        219,
+        338
+      ],
+      "description": "Raster layout reference with baked-in text. Rebuild as live HTML/CSS; retains original alpha.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-references/secondary-button.png",
+      "size": [
+        156,
+        55
+      ],
+      "source_box": [
+        230,
+        284,
+        386,
+        339
+      ],
+      "description": "Raster layout reference with baked-in text. Rebuild as live HTML/CSS; retains original alpha.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-references/language-switch.png",
+      "size": [
+        113,
+        42
+      ],
+      "source_box": [
+        831,
+        7,
+        944,
+        49
+      ],
+      "description": "Raster layout reference with baked-in text. Rebuild as live HTML/CSS; retains original alpha.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-references/cta-button.png",
+      "size": [
+        153,
+        50
+      ],
+      "source_box": [
+        621,
+        1397,
+        774,
+        1447
+      ],
+      "description": "Raster layout reference with baked-in text. Rebuild as live HTML/CSS; retains original alpha.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        253,
+        254
+      ]
+    },
+    {
+      "file": "ui-references/cta-banner.png",
+      "size": [
+        830,
+        87
+      ],
+      "source_box": [
+        0,
+        1381,
+        830,
+        1468
+      ],
+      "description": "Raster layout reference with baked-in text. Rebuild as live HTML/CSS; retains original alpha.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "ui-references/faq-row.png",
+      "size": [
+        566,
+        27
+      ],
+      "source_box": [
+        369,
+        1180,
+        935,
+        1207
+      ],
+      "description": "Raster layout reference with baked-in text. Rebuild as live HTML/CSS; retains original alpha.",
+      "boundary_mask": null,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ]
+}

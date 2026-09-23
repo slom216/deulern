@@ -1,4 +1,4 @@
-/* DeuLern — cubist paper. Tokens below mirror design.md; retheme here only. */
+/* DeuLern — poster collage. Tokens below mirror design.md; retheme here only. */
 
 @font-face {
   font-family: 'Manrope';
@@ -10,39 +10,48 @@
     U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
-/* Noto Serif Display, static 700 / 75% width instance — the condensed poster headline */
+/* heavy geometric sans — the big poster headlines */
 @font-face {
-  font-family: 'Serif Display';
+  font-family: 'Outfit';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-display: swap;
-  src: url('/fonts/serif-display-latin.woff2') format('woff2');
+  src: url('/fonts/outfit-800-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* condensed sans — card titles, subheads, the CTA line; echoes the lettering in the art */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/oswald-600-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
     U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
 
 :root {
-  /* colors — light-dark(light, dark). Light is sampled from the artwork; dark is charcoal paper. */
+  /* colors — light-dark(light, dark). Light is sampled from the mockup; dark is night paper. */
   color-scheme: light dark;
-  --paper: light-dark(#efe1c8, #25221e);
-  --paper-deep: light-dark(#e6d4b2, #312d27);
-  --paper-tint: light-dark(#e3d2af, #38332c); /* FAQ rows, chips */
-  --ink: light-dark(#1e1c19, #efe1c8);
-  --ink-muted: light-dark(#4a453d, #b9ad95);
-  --red: light-dark(#a53727, #c24a32);
-  --on-red: #f5ead6;
-  --blue: light-dark(#2e5574, #86abc8);
-  --mustard: #d29842;
-  --charcoal: #383a37;
-  --rule: light-dark(#1e1c1933, #efe1c833);
-  --rule-strong: light-dark(#1e1c1999, #efe1c899);
-  /* the rasters carry baked-in cream paper — on charcoal they need a frame to read as prints */
-  --print-frame: light-dark(transparent, #efe1c833);
+  --paper: light-dark(#e6ddcc, #1c1a17);
+  --paper-deep: light-dark(#ddd3c0, #25221e);
+  --paper-tint: light-dark(#ebe4d6, #2e2a25); /* FAQ rows, chips, lang pill */
+  --ink: light-dark(#141414, #efe6d6);
+  --ink-muted: light-dark(#3f3a33, #b8ad9a);
+  --red: #c63f1e;       /* buttons carry cream text: 4.7:1 */
+  --accent: light-dark(#c63f1e, #e8603f); /* headline accent phrase, large text only */
+  --on-red: #fbf5ea;
+  --blue: light-dark(#2f5f8f, #8fb3dc);
+  --mustard: #f2a82c;
+  --rule: light-dark(#14141433, #efe6d633);
+  --rule-strong: light-dark(#14141499, #efe6d699);
 
-  /* radii */
-  --r-sm: 3px;
-  --r-md: 6px;
+  /* radii — trimmed paper, not app chrome */
+  --r-sm: 2px;
+  --r-md: 3px;
   --r-full: 9999px;
 
   /* spacing */
@@ -51,17 +60,20 @@
   --s-md: 28px;
   --s-lg: 40px;
   --s-xl: 88px;
+  /* 44px on desktop leaves room for the edge strips, as in the poster; 16px on phones */
+  --gutter: clamp(16px, 4vw, 44px);
 
   --font: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display: 'Serif Display', 'Georgia', 'Times New Roman', serif;
-  /* same turbulence as the light grain, lifted to pale fibres so it shows on charcoal */
-  --grain-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .94 0 0 0 0 .88 0 0 0 0 .78 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --container: 1200px;
-  /* past this width the page is a paper sheet on a darker table; the artwork's straight
-     cut edges line up with the sheet edge */
-  --sheet: 1440px;
+  --font-display: 'Outfit', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --font-cond: 'Oswald', 'Arial Narrow', 'Roboto Condensed', sans-serif-condensed, sans-serif;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* same turbulence lifted to pale fibres so it shows on the night paper */
+  --grain-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .94 0 0 0 0 .88 0 0 0 0 .78 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* the page is one poster sheet. The art is cropped from a 964px mockup, so the sheet stops
+     at 1100px to keep it within ~1.15x native; past that it sits on a darker table. */
+  --sheet: 1100px;
   --page: min(100vw, var(--sheet));
-  --table: light-dark(#d8c6a3, #181614);
+  --table: light-dark(#cfc4ae, #100f0d);
 }
 
 /* the switcher: the toggle sets data-theme, which pins color-scheme and therefore every
@@ -77,7 +89,7 @@ body, h1, h2, h3, p, figure, ul, dl, dd { margin: 0; }
 ul { padding: 0; list-style: none; }
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
-:target { scroll-margin-top: 96px; }
+:target { scroll-margin-top: 24px; }
 
 html {
   background: var(--table);
@@ -90,59 +102,57 @@ html {
 }
 
 body {
-  background-color: var(--paper);
-  /* paper grain: one inline turbulence tile, multiplied over the paper colour */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position: relative;
+  background: var(--paper) var(--grain);
   color: var(--ink);
   font-family: var(--font);
   font-size: 15px;
   font-weight: 500;
   line-height: 23px;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip; /* edge decorations bleed to the sheet edge, never past it */
+  overflow-x: clip; /* edge art bleeds to the sheet edge, never past it */
   max-width: var(--sheet);
   min-height: 100vh;
   margin-inline: auto;
-  box-shadow: 0 0 80px color-mix(in srgb, var(--charcoal) 30%, transparent);
 }
 
-/* ---------- dark-only touches ----------
-   Colours flip through light-dark() above; these are the few things a colour token cannot
-   carry. Two selectors: OS dark with no stored choice, and an explicit dark choice. */
+/* dark grain — the one thing a colour token cannot carry. Two selectors: OS dark with no
+   stored choice, and an explicit dark choice. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) body { background-image: var(--grain-dark); }
-  :root:not([data-theme='light']) .section--cta .deco--panel { filter: brightness(1.45) contrast(.95); }
 }
 :root[data-theme='dark'] body { background-image: var(--grain-dark); }
-:root[data-theme='dark'] .section--cta .deco--panel { filter: brightness(1.45) contrast(.95); }
 
 /* ---------- type scale ---------- */
 .t-display,
-.t-h2,
-.t-h3 {
+.t-h2 {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 .t-display {
-  font-size: clamp(44px, 6.4vw, 78px);
+  font-size: clamp(40px, 5.8vw, 64px);
   line-height: 0.98;
+  text-wrap: wrap; /* balance would split "Learn / German for / free forever." into three */
 }
 .t-h2 {
-  font-size: clamp(34px, 4.6vw, 50px);
-  line-height: 1.02;
+  font-size: clamp(34px, 4.8vw, 52px);
+  line-height: 1;
 }
 .t-h3 {
-  font-size: clamp(22px, 2.2vw, 26px);
-  line-height: 1.1;
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 22px);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
 }
-.accent { color: var(--red); }
+.accent { color: var(--accent); }
 .t-lead {
-  font-size: clamp(16px, 1.6vw, 18px);
+  font-size: clamp(16px, 1.6vw, 17px);
   font-weight: 500;
   line-height: 1.5;
-  color: var(--ink-muted);
 }
 .t-small {
   font-size: 14px;
@@ -150,35 +160,47 @@ body {
   color: var(--ink-muted);
 }
 .t-eyebrow {
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: var(--s-sm);
+  font-size: 13px;
   font-weight: 800;
   line-height: 16px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--blue);
 }
+.t-eyebrow--rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule-strong);
+}
 
 /* ---------- layout ---------- */
 .container {
   width: 100%;
-  max-width: var(--container);
+  max-width: var(--sheet);
   margin-inline: auto;
-  padding-inline: var(--s-md);
+  padding-inline: var(--gutter);
 }
 .section {
   position: relative;
-  padding-block: clamp(48px, 7vw, 80px);
+  padding-block: clamp(40px, 5vw, 56px);
 }
 .section__head {
   max-width: 62ch;
-  margin-bottom: clamp(28px, 4vw, 44px);
+  margin-bottom: clamp(24px, 3vw, 32px);
 }
-.section__head > * + * { margin-top: var(--s-sm); }
+.section__head > * + * { margin-top: var(--s-xs); }
+.section__head:has(.t-eyebrow--rule) { max-width: none; }
+.section__head .t-lead { max-width: 58ch; }
 
-/* edge decorations — cut-paper shapes pinned to the viewport edge, desktop only */
+/* edge decorations — cut-paper shapes pinned to the sheet edge, desktop only */
 .deco {
   position: absolute;
   z-index: 0;
+  left: 0;
   pointer-events: none;
   user-select: none;
 }
@@ -206,65 +228,74 @@ body {
 }
 .skip-link:focus-visible { transform: none; }
 
-/* ---------- header ---------- */
+/* ---------- header ----------
+   Not sticky: the hero collage runs up behind it to the top edge of the sheet, like the poster. */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 3;
 }
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--s-md);
   min-height: 68px;
-  border-bottom: 1px solid var(--rule);
 }
 .wordmark {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 26px;
+  font-weight: 600;
   letter-spacing: -0.02em;
   text-decoration: none;
 }
-.wordmark b { font-weight: 800; }
-.header__inner .wordmark { margin-right: auto; }
+.wordmark img { width: 32px; height: auto; }
+.nav {
+  display: flex;
+  gap: var(--s-md);
+  margin-left: clamp(24px, 12vw, 150px);
+}
+.nav a {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.nav a:hover { color: var(--accent); }
 
 /* ---------- theme toggle ----------
    One stateless half-disc icon in both themes — nothing to swap, so no icon state to keep
-   in sync with color-scheme. */
+   in sync with color-scheme. It sits over the hero art, so it carries its own paper. */
 .theme-toggle {
   flex: none;
+  margin-left: auto;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   padding: 0;
   border: 1px solid var(--rule-strong);
   border-radius: var(--r-full);
-  background: transparent;
+  background: var(--paper-tint);
   color: var(--ink);
   cursor: pointer;
   transition: border-color .18s ease, color .18s ease;
 }
-.theme-toggle:hover { border-color: var(--red); color: var(--red); }
+.theme-toggle:hover { border-color: var(--red); color: var(--accent); }
 .theme-toggle svg { width: 20px; height: 20px; }
 
 /* ---------- language switcher ----------
-   EN sits left, DE right. The active side becomes a raised knob carrying that language's
-   flag; the inactive side stays plain text. Which side is active comes from .lang--en /
-   .lang--de on the element, set per page — pure CSS, no JS, no state. */
+   EN left, DE right. The active side gets a raised knob with a red dot. Which side is active
+   comes from .lang--en / .lang--de on the element, set per page — pure CSS, no JS. */
 .lang {
   display: inline-flex;
   align-items: center;
   gap: 2px;
   padding: 3px;
-  border: 1px solid var(--rule-strong);
+  border: 1px solid var(--rule);
   border-radius: var(--r-full);
+  background: var(--paper-tint);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -280,15 +311,19 @@ body {
   border-radius: var(--r-full);
   color: var(--ink-muted);
 }
-.lang__opt svg { width: 18px; height: 12px; border-radius: var(--r-sm); }
-/* only the active option shows its flag and gets the knob */
-.lang--en .lang__opt--de svg,
-.lang--de .lang__opt--en svg { display: none; }
 .lang--en .lang__opt--en,
 .lang--de .lang__opt--de {
-  background: var(--paper-tint);
+  background: var(--paper);
   color: var(--ink);
   box-shadow: inset 0 0 0 1px var(--rule);
+}
+.lang--en .lang__opt--en::before,
+.lang--de .lang__opt--de::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: var(--r-full);
+  background: var(--red);
 }
 
 /* ---------- buttons ---------- */
@@ -298,7 +333,7 @@ body {
   justify-content: center;
   gap: 10px;
   min-height: 48px;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border: 2px solid transparent;
   border-radius: var(--r-md);
   font-size: 16px;
@@ -315,7 +350,7 @@ body {
   color: var(--on-red);
 }
 .btn--primary::after { content: '\2192'; font-size: 1.35em; line-height: 1; }
-.btn--primary:hover { background: color-mix(in srgb, var(--red) 82%, var(--charcoal)); }
+.btn--primary:hover { background: color-mix(in srgb, var(--red) 80%, #141414); }
 .btn--secondary {
   background: transparent;
   color: var(--ink);
@@ -330,53 +365,59 @@ body {
   gap: var(--s-xs);
 }
 .chip {
-  padding: 4px 11px;
-  border: 1px solid var(--rule);
+  padding: 3px 10px;
+  border: 1px solid var(--rule-strong);
   border-radius: var(--r-full);
-  background: var(--paper-tint);
   color: var(--ink-muted);
   font-size: 12px;
   font-weight: 600;
+  line-height: 18px;
 }
 
 /* ---------- hero ---------- */
+/* the collage is pinned to the sheet's top-right corner and runs up behind the header
+   (68px); its empty top-right notch is where the toggle and language pill sit */
 .hero {
   position: relative;
-  padding-block: clamp(36px, 5vw, 64px) clamp(56px, 8vw, 96px);
+  z-index: 2;
+  min-height: calc(var(--page) * .52 * 419 / 502 - 68px);
+  padding-block: clamp(8px, 1.5vw, 16px) var(--s-lg);
 }
 .hero__inner {
   display: grid;
-  gap: clamp(32px, 5vw, 56px);
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: var(--s-lg);
+  grid-template-columns: minmax(0, 52fr) minmax(0, 48fr); /* the absolute art takes no cell */
   align-items: center;
 }
+.hero__art {
+  position: absolute;
+  z-index: -1;
+  top: -68px;
+  right: 0;
+  width: calc(var(--page) * .52);
+}
+.hero__art img { width: 100%; }
 .hero__copy > * + * { margin-top: var(--s-md); }
-.hero__copy .t-lead { max-width: 50ch; margin-top: var(--s-md); }
+.hero__copy .t-lead { max-width: 44ch; margin-top: var(--s-sm); }
 .hero__cta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-sm);
+  gap: var(--s-md);
 }
 .hero__proof {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-sm) var(--s-md);
+  gap: var(--s-xs) var(--s-md);
+  margin-top: var(--s-sm) !important;
 }
 .hero__proof li {
   display: flex;
   align-items: center;
   gap: var(--s-xs);
-  color: var(--ink);
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
 }
-.hero__proof svg { flex: none; width: 18px; height: 18px; color: var(--ink); }
-/* the collage bleeds past the container's right edge on wide screens */
-.hero__art {
-  margin-right: calc(min(0px, (var(--container) - var(--page)) / 2) - var(--s-md));
-  justify-self: end;
-  width: min(100%, 640px);
-}
-.hero__art img { width: 100%; }
+.hero__proof svg { flex: none; width: 18px; height: 18px; }
 
 /* hero panel — stacked app links (404 pages) */
 .stack { display: grid; gap: var(--s-sm); }
@@ -387,7 +428,7 @@ body {
   padding: var(--s-sm);
   border: 1px solid var(--rule-strong);
   border-radius: var(--r-md);
-  background: var(--paper-deep);
+  background: var(--paper-tint);
 }
 .stack__row:nth-child(2) { margin-left: clamp(0px, 3vw, 32px); }
 .stack__row:nth-child(3) { margin-left: clamp(0px, 6vw, 64px); }
@@ -408,7 +449,7 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
   width: 48px;
   height: 48px;
   border-radius: var(--r-sm);
-  background: var(--charcoal);
+  background: #141414;
   color: var(--on-red);
   font-family: var(--font-display);
   font-size: 24px;
@@ -419,13 +460,7 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
 .stack__row .stack__glyph { color: var(--on-red); font-size: 24px; }
 
 /* ---------- app cards ---------- */
-/* the band is a sheet of darker paper laid slightly askew */
-.section--band {
-  background: var(--paper-deep);
-  clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 2vw), 0 100%);
-  padding-block: calc(clamp(48px, 7vw, 80px) + 2vw);
-}
-.section--band .deco--sliver { left: 0; top: 0; width: 26px; }
+#apps .deco { top: 0; width: 31px; }
 .cards {
   display: grid;
   gap: var(--s-sm);
@@ -434,34 +469,40 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--s-sm);
-  padding: 8px 8px var(--s-sm);
+  gap: var(--s-xs);
+  padding: 8px 12px var(--s-sm);
   border: 1px solid var(--rule);
   border-radius: var(--r-sm);
-  background: var(--paper);
+  background: var(--paper-deep);
   color: var(--ink);
 }
-.card > :not(img) { margin-inline: 8px; }
 .card img {
-  /* native size: the art is a 199×145 crop of the mockup and blurs if scaled up */
-  width: 199px;
+  /* the index number is printed into the art, so there is none in the markup */
+  width: 100%;
+  max-width: 240px;
   align-self: center;
-  border-radius: var(--r-sm);
-  outline: 1px solid var(--print-frame);
+  margin-bottom: var(--s-xs);
 }
-.card .t-h3 { margin-top: 4px; }
-.card p { color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
-.card .btn { margin-top: auto; font-size: 14px; padding-inline: 12px; }
+.card p { color: var(--ink-muted); font-size: 14px; line-height: 1.45; }
+.card .chips { margin-block: var(--s-xs) var(--s-sm); }
+.card .btn {
+  margin-top: auto;
+  min-height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
 
-/* ---------- why ---------- */
-.why-wrap {
+/* ---------- why + faq ----------
+   Two rows on one grid: heading | benefits, then staircase | FAQ. */
+.duo { position: relative; }
+.duo__row {
   display: grid;
   gap: var(--s-lg);
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 3fr);
-  align-items: start;
-  padding-right: 150px; /* room for the blue panel */
+  grid-template-columns: minmax(0, 36fr) minmax(0, 64fr);
 }
-.why-wrap .t-h2 { font-size: clamp(40px, 5.6vw, 64px); line-height: 0.98; }
+#why { padding-bottom: var(--s-md); }
+#why .deco { top: 0; width: 30px; }
+#why .t-h2 { font-size: clamp(40px, 5.8vw, 64px); line-height: 0.96; }
 .why {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -470,37 +511,32 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
   padding: 0 var(--s-md);
   border-left: 1px solid var(--rule-strong);
 }
-.why img {
-  width: auto;
-  height: 68px;
-  border-radius: var(--r-full);
-  outline: 1px solid var(--print-frame);
-}
+.why img { width: auto; height: 90px; }
 .why b {
   display: block;
   margin-block: var(--s-sm) var(--s-xs);
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 700;
+  font-family: var(--font-cond);
+  font-size: 22px;
+  font-weight: 600;
   line-height: 1.1;
 }
-.why p { color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
-#why .deco--panel { right: 0; top: 0; width: clamp(120px, 14vw, 171px); }
-#why .deco--wedge { left: 0; top: 0; width: 44px; }
+.why p { color: var(--ink-muted); font-size: 14px; line-height: 1.45; }
 
-/* ---------- faq ---------- */
-.faq-wrap {
-  display: grid;
-  gap: var(--s-lg);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr);
-  align-items: center;
+#faq { padding-block: 0; align-items: end; }
+#faq > div { padding-bottom: var(--s-lg); }
+#faq .deco-stairs {
+  /* bleeds to the sheet's left edge and sits on the CTA band */
+  margin-left: calc(-1 * var(--gutter));
+  width: calc(100% + var(--gutter));
+  max-width: 380px;
 }
-.faq-wrap .deco-stairs {
-  margin-left: calc(min(0px, (var(--container) - var(--page)) / 2) - var(--s-md));
-  max-width: 341px;
-  width: 100%;
+#faq .t-h2 {
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 34px);
+  letter-spacing: -0.01em;
 }
-.faq { display: grid; gap: var(--s-xs); }
+.faq { display: grid; gap: 4px; }
 .faq details {
   border-radius: var(--r-sm);
   background: var(--paper-tint);
@@ -510,8 +546,8 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
   align-items: center;
   justify-content: space-between;
   gap: var(--s-sm);
-  padding: 10px 18px;
-  font-size: 15px;
+  padding: 7px 16px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   list-style: none;
@@ -520,88 +556,99 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
 .faq summary::after {
   content: '+';
   flex: none;
-  color: var(--blue);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1;
 }
 .faq details[open] summary::after { content: '\2212'; }
 .faq p {
-  padding: 0 18px 14px;
+  padding: 0 16px 12px;
   color: var(--ink-muted);
+  font-size: 14px;
 }
 
 /* ---------- cta band ---------- */
-.section--cta { padding-block: var(--s-md); }
+.section--cta { padding-block: 0; z-index: 2; }
 .band {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--s-md);
-  margin-right: 170px; /* the charcoal panel owns the right edge */
-  padding: clamp(28px, 4vw, 40px) clamp(28px, 6vw, 72px);
-  background: var(--red);
+  gap: var(--s-sm) var(--s-md);
+  margin-right: 150px; /* the black corner panel owns the right edge */
+  /* a mustard strip at the sheet edge, then the red band, cut on a slant at the right */
+  padding: 22px clamp(28px, 5vw, 72px) 22px calc(56px + clamp(20px, 3vw, 32px));
+  background: linear-gradient(90deg, var(--mustard) 56px, var(--red) 56px);
   color: var(--on-red);
-  clip-path: polygon(3% 0, 100% 0, 96% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 36px) 100%, 0 100%);
 }
-.band > div { max-width: 56ch; }
-.band > div > * + * { margin-top: var(--s-xs); }
-.band .t-h3 { font-size: clamp(24px, 3vw, 34px); }
-.band .t-small { color: color-mix(in srgb, var(--on-red) 85%, transparent); }
-.band .btn--primary { background: var(--on-red); color: #1e1c19; }
+.band > div { flex: 1 1 320px; max-width: 60ch; }
+.band .t-h3 { font-size: clamp(24px, 3vw, 32px); }
+.band .t-small { color: var(--on-red); margin-top: 2px; }
+.band .btn--primary { background: var(--on-red); color: #141414; }
 .band .btn--primary:hover { background: var(--mustard); }
-.section--cta .deco--panel { right: 0; top: 0; width: clamp(130px, 15vw, 184px); }
+.section--cta .deco {
+  left: auto;
+  right: 0;
+  top: -18px;
+  width: clamp(150px, 20vw, 212px);
+}
 
 /* ---------- footer ---------- */
 .footer {
-  padding-block: var(--s-lg) var(--s-md);
+  position: relative;
+  z-index: 1;
+  padding-block: var(--s-md) var(--s-sm);
 }
 .footer__grid {
   display: grid;
-  gap: var(--s-lg);
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--s-md);
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  margin-right: 170px; /* clear of the corner panel above */
 }
 .footer__grid > div + div { padding-left: var(--s-md); border-left: 1px solid var(--rule); }
 .footer .wordmark { font-size: 22px; }
 .footer h3,
 .footer__share-label {
   margin-bottom: var(--s-xs);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink);
 }
-.footer li + li { margin-top: 4px; }
+.footer li + li { margin-top: 2px; }
 
 /* who runs this, how to reach them, what we do not collect */
 .footer__meta {
   display: grid;
   gap: var(--s-xs);
-  max-width: 38ch;
-  margin-top: var(--s-sm);
+  max-width: 40ch;
+  margin-top: var(--s-xs);
   color: var(--ink-muted);
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 .footer__meta a { font-size: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-md) var(--s-lg);
+  margin-top: var(--s-md);
+}
 .footer__share {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--s-xs) var(--s-sm);
-  margin-top: var(--s-lg);
+  gap: var(--s-xs);
 }
-.footer__share + .footer__share { margin-top: var(--s-sm); }
-.footer__share-label { margin-bottom: 0; }
+.footer__share-label { flex-basis: 100%; margin-bottom: 0; }
 .footer__share .chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: transparent;
-  border-color: var(--rule-strong);
+  padding: 5px 14px;
   color: var(--ink);
   text-decoration: none;
 }
@@ -613,10 +660,10 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
 }
 .footer a {
   color: var(--ink-muted);
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
 }
-.footer a:hover { color: var(--red); }
+.footer a:hover { color: var(--accent); }
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
@@ -629,38 +676,41 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
   font-size: 13px;
 }
 
-/* the thin edge shapes need real margin beside the container, or they sit on the text */
-@media (max-width: 1280px) {
-  .deco--sliver, .deco--wedge { display: none; }
-}
-
 /* ---------- tablet ---------- */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .why-wrap { grid-template-columns: 1fr; padding-right: 0; }
-  #why .deco--panel { display: none; }
-  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .duo__row { grid-template-columns: 1fr; gap: var(--s-md); }
+  #why .deco { display: none; }
+  #faq .deco-stairs { display: none; }
+  #faq > div { padding-bottom: var(--s-xl); }
+  .footer__grid { grid-template-columns: 1fr 1fr; margin-right: 0; }
   .footer__grid > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .footer__bottom { margin-right: 190px; }
 }
 
 /* ---------- mobile ---------- */
 @media (max-width: 860px) {
   .header__inner { gap: var(--s-sm); }
+  .nav { display: none; } /* the same anchors are in the footer */
+  .hero { min-height: 0; }
   .hero__inner { grid-template-columns: 1fr; }
-  .hero__art { justify-self: center; margin-right: 0; }
-  .stack__row:nth-child(2),
-  .stack__row:nth-child(3),
-  .stack__row:nth-child(4) { margin-left: 0; }
+  /* the collage stops bleeding and sits under the copy at up to native size */
+  .hero__art {
+    position: static;
+    width: min(100%, 502px);
+    margin: var(--s-sm) auto 0;
+    padding-inline: var(--s-md);
+  }
   .deco { display: none; }
   .why { grid-template-columns: 1fr; gap: var(--s-md); }
   .why li { display: grid; grid-template-columns: auto 1fr; column-gap: var(--s-sm); padding: 0; border: 0; }
-  .why li img { grid-row: span 2; height: 56px; }
-  .why li b { margin-top: 0; }
-  .faq-wrap { grid-template-columns: 1fr; }
-  .faq-wrap .deco-stairs { display: none; }
-  .band { margin-right: 0; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%); }
+  .why li img { grid-row: span 2; height: 64px; }
+  .why li b { margin-top: 4px; }
+  #faq > div { padding-bottom: var(--s-lg); }
+  .band { margin-right: 0; padding-left: calc(20px + var(--s-md)); background: linear-gradient(90deg, var(--mustard) 20px, var(--red) 20px); clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%); }
+  .footer__bottom { margin-right: 0; }
   .btn { width: 100%; }
-  .lang { width: auto; }
+  .hero__cta { gap: var(--s-sm); }
   .hero__cta .btn { flex: 1 1 200px; }
 }
 @media (max-width: 560px) {
