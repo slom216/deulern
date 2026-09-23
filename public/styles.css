@@ -347,6 +347,7 @@ body {
 }
 .stack__row:nth-child(2) { margin-left: clamp(0px, 3vw, 32px); }
 .stack__row:nth-child(3) { margin-left: clamp(0px, 6vw, 64px); }
+.stack__row:nth-child(4) { margin-left: clamp(0px, 9vw, 96px); }
 /* the rows are real links to each app */
 a.stack__row {
   color: var(--on-surface);
@@ -548,7 +549,8 @@ a.stack__row:focus-visible span span { color: var(--on-surface); }
   .header__inner { gap: var(--s-sm); }
   .hero__inner { grid-template-columns: 1fr; }
   .stack__row:nth-child(2),
-  .stack__row:nth-child(3) { margin-left: 0; }
+  .stack__row:nth-child(3),
+  .stack__row:nth-child(4) { margin-left: 0; }
   .btn { width: 100%; }
   .lang, .card .btn { width: auto; }
   .hero__cta .btn { flex: 1 1 220px; }
