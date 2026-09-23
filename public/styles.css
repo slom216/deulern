@@ -25,12 +25,12 @@
 :root {
   /* colors — light-dark(light, dark). Light is sampled from the artwork; dark is charcoal paper. */
   color-scheme: light dark;
-  --paper: light-dark(#efe1c8, #1d1b18);
-  --paper-deep: light-dark(#e6d4b2, #282520);
-  --paper-tint: light-dark(#e3d2af, #2f2b25); /* FAQ rows, chips */
+  --paper: light-dark(#efe1c8, #25221e);
+  --paper-deep: light-dark(#e6d4b2, #312d27);
+  --paper-tint: light-dark(#e3d2af, #38332c); /* FAQ rows, chips */
   --ink: light-dark(#1e1c19, #efe1c8);
   --ink-muted: light-dark(#4a453d, #b9ad95);
-  --red: light-dark(#a53727, #d9573f);
+  --red: light-dark(#a53727, #c24a32);
   --on-red: #f5ead6;
   --blue: light-dark(#2e5574, #86abc8);
   --mustard: #d29842;
@@ -54,7 +54,14 @@
 
   --font: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-display: 'Serif Display', 'Georgia', 'Times New Roman', serif;
+  /* same turbulence as the light grain, lifted to pale fibres so it shows on charcoal */
+  --grain-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .94 0 0 0 0 .88 0 0 0 0 .78 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --container: 1200px;
+  /* past this width the page is a paper sheet on a darker table; the artwork's straight
+     cut edges line up with the sheet edge */
+  --sheet: 1440px;
+  --page: min(100vw, var(--sheet));
+  --table: light-dark(#d8c6a3, #181614);
 }
 
 /* the switcher: the toggle sets data-theme, which pins color-scheme and therefore every
@@ -73,6 +80,7 @@ img { height: auto; }
 :target { scroll-margin-top: 96px; }
 
 html {
+  background: var(--table);
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
@@ -91,8 +99,22 @@ body {
   font-weight: 500;
   line-height: 23px;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip; /* edge decorations bleed to the viewport edge, never past it */
+  overflow-x: clip; /* edge decorations bleed to the sheet edge, never past it */
+  max-width: var(--sheet);
+  min-height: 100vh;
+  margin-inline: auto;
+  box-shadow: 0 0 80px color-mix(in srgb, var(--charcoal) 30%, transparent);
 }
+
+/* ---------- dark-only touches ----------
+   Colours flip through light-dark() above; these are the few things a colour token cannot
+   carry. Two selectors: OS dark with no stored choice, and an explicit dark choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) body { background-image: var(--grain-dark); }
+  :root:not([data-theme='light']) .section--cta .deco--panel { filter: brightness(1.45) contrast(.95); }
+}
+:root[data-theme='dark'] body { background-image: var(--grain-dark); }
+:root[data-theme='dark'] .section--cta .deco--panel { filter: brightness(1.45) contrast(.95); }
 
 /* ---------- type scale ---------- */
 .t-display,
@@ -350,7 +372,7 @@ body {
 .hero__proof svg { flex: none; width: 18px; height: 18px; color: var(--ink); }
 /* the collage bleeds past the container's right edge on wide screens */
 .hero__art {
-  margin-right: calc(min(0px, (var(--container) - 100vw) / 2) - var(--s-md));
+  margin-right: calc(min(0px, (var(--container) - var(--page)) / 2) - var(--s-md));
   justify-self: end;
   width: min(100%, 640px);
 }
@@ -474,7 +496,7 @@ a.stack__row:focus-visible .stack__glyph { background: var(--red); }
   align-items: center;
 }
 .faq-wrap .deco-stairs {
-  margin-left: calc(min(0px, (var(--container) - 100vw) / 2) - var(--s-md));
+  margin-left: calc(min(0px, (var(--container) - var(--page)) / 2) - var(--s-md));
   max-width: 341px;
   width: 100%;
 }

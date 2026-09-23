@@ -13,13 +13,15 @@ colors:
   blue: "#2E5574"
   mustard: "#D29842"
   charcoal: "#383A37"
+  table: "#D8C6A3"
 colors-dark:
-  paper: "#1D1B18"
-  paper-deep: "#282520"
-  paper-tint: "#2F2B25"
+  paper: "#25221E"
+  paper-deep: "#312D27"
+  paper-tint: "#38332C"
+  table: "#181614"
   ink: "#EFE1C8"
   ink-muted: "#B9AD95"
-  red: "#D9573F"
+  red: "#C24A32"
   blue: "#86ABC8"
 typography:
   display:
@@ -113,7 +115,7 @@ Paper carries the page. Ink is used for text and structure. Red is the one actio
 Headlines use a condensed high-contrast serif (Noto Serif Display at 700 and 75% width, self-hosted under the family name `Serif Display`). Each headline carries one accent phrase in red. Body and UI text use Manrope. Eyebrows are small, widely tracked capitals in blue.
 
 ## Layout
-The layout is a 1200px container with artwork that breaks out of it. The hero collage and the staircase bleed to the viewport edge, and cut-paper shapes are pinned to the page edges. The apps section sits on a slightly darker sheet with angled edges, and the CTA is a slanted red band. The edge shapes are dropped on narrow screens.
+The layout is a 1200px container with artwork that breaks out of it. The hero collage and the staircase bleed to the viewport edge, and cut-paper shapes are pinned to the page edges. The apps section sits on a slightly darker sheet with angled edges, and the CTA is a slanted red band. The edge shapes are dropped on narrow screens. Past 1440px the page stops growing and becomes a paper sheet on a darker table, so the artwork's straight cut edges line up with the sheet edge instead of floating in space.
 
 ## Shapes
 Corners are small (3–6px), like trimmed paper. Chips are the only pills. Angles come from `clip-path` on section bands, not from rotated elements.
