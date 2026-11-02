@@ -1,0 +1,22 @@
+# DeuLern
+
+> Free German learning apps for CEFR levels A1 to B1. Everything runs in the browser: no account, no installation, and learning progress stays on the learner's device. Explanations are in English.
+
+DeuLern has four apps. Each lesson, text and verb has its own URL, so a learner can be sent straight to one topic.
+
+## Apps
+
+- [Grammatik mit System](https://grammatik.deulern.com/chapters): 85 grammar chapters from A1 to B1, each with an explanation, examples, common mistakes and exercises. Chapter URLs look like https://grammatik.deulern.com/chapter/8 (separable verbs).
+- [Lese Reise](https://lese.deulern.com/): 150 graded German reading texts (50 each for A1, A2 and B1) with a glossary and comprehension questions.
+- [Deutsch Verben Meistern](https://verben.deulern.com/library): conjugation tables and spaced-repetition practice for 676 German verbs from A1 to B1. Verb URLs look like https://verben.deulern.com/library/a1v-001-sein.
+- [Deutsch Wortschatz](https://wortschatz.deulern.com/): German vocabulary trainer for A1, A2 and B1, organised by level, frequency and topic.
+
+## Reading texts by level
+
+- [A1 reading texts](https://lese.deulern.com/level/a1)
+- [A2 reading texts](https://lese.deulern.com/level/a2)
+- [B1 reading texts](https://lese.deulern.com/level/b1)
+
+## Optional
+
+- [DeuLern in German](https://deulern.com/de/)
